@@ -1,0 +1,21 @@
+Tecnología Inteligente — License Agreement
+
+Copyright © 2025 Tecnología Inteligente
+
+This project is provided for educational and personal use only. You are free to:
+
+- View, copy, and modify the code for personal or non-commercial projects
+- Use the design and structure as inspiration for your own learning
+- Share the project with proper attribution
+
+You may NOT:
+
+- Sell, redistribute, or host this project commercially without written permission
+- Claim the design, content, or branding as your own
+- Use the logo, name, or visual identity for commercial purposes
+
+All content, including articles, styles, and branding elements, are protected under copyright law.
+
+For commercial licensing or collaboration inquiries, please contact us via the contact page.
+
+Last updated: September 22, 2025

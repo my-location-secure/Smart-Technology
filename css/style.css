@@ -1,0 +1,240 @@
+/* ====== Variables ====== */
+:root {
+  --color-bg: #f9f9f9;
+  --color-text: #333;
+  --color-primary: #004080;
+  --color-accent: #0077cc;
+  --color-footer: #eee;
+  --font-main: 'Segoe UI', sans-serif;
+}
+
+/* ====== Modo oscuro ====== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1e1e1e;
+    --color-text: #ddd;
+    --color-primary: #0055aa;
+    --color-footer: #2a2a2a;
+  }
+}
+
+/* ====== Reset básico ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  padding-bottom: 4rem;
+}
+
+/* ====== Encabezado ====== */
+header.institucional {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Estilo base */
+.logo {
+  width: 50px;               /* Tamaño estándar */
+  height: auto;               /* Mantiene proporción */
+  display: block;
+  margin: 0 auto;             /* Centrado horizontal */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover elegante */
+.logo:hover {
+  transform: scale(1.05);     /* Zoom suave */
+  filter: drop-shadow(0 0 6px rgba(0, 64, 128, 0.4));
+}
+
+/* Versión con fondo institucional */
+.logo-box {
+  background-color: #dddddd;
+  padding: 0.5rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+
+/* Logo en modo oscuro automático */
+@media (prefers-color-scheme: dark) {
+  .logo-box {
+    background-color: #001f3f;
+  }
+
+  .logo {
+    filter: brightness(1.2);
+  }
+}
+
+/* Logo responsivo para móviles */
+@media (max-width: 600px) {
+  .logo {
+    width: 120px;
+  }
+}
+
+/* Animación pulsante opcional */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.logo.pulsante {
+  animation: pulse 2s infinite;
+}
+
+/* Logo en el pie de página */
+footer .logo {
+  width: 100px;
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+
+
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--color-accent);
+}
+
+/* ====== Contenido principal ====== */
+main.contenido {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  color: var(--color-primary);
+}
+
+p.intro {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.ul {
+  font-size: 1.07rem;
+}
+
+/* ====== Bloques de anuncio ====== */
+.adsense {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* ====== Pie de página ====== */
+footer {
+  background-color: var(--color-footer);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ====== Animaciones suaves ====== */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 600px) {
+  header.institucional {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #004080;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0066cc;
+}
+
+#respuesta {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #dff0d8;
+  color: #3c763d;
+  border-radius: 4px;
+}
+
+.oculto {
+  display: none;
+}
