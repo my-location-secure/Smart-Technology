@@ -37,7 +37,7 @@ body {
 header.institucional {
   background-color: var(--color-primary);
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,25 +46,26 @@ header.institucional {
 
 /* Estilo base */
 .logo {
-  width: 50px;               /* Tamaño estándar */
+  width: 10%;               /* Tamaño estándar */
   height: auto;               /* Mantiene proporción */
   display: block;
-  margin: 0 auto;             /* Centrado horizontal */
+  margin: 0 1rem;             /* Centrado horizontal */
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 /* Hover elegante */
 .logo:hover {
   transform: scale(1.05);     /* Zoom suave */
-  filter: drop-shadow(0 0 6px rgba(0, 64, 128, 0.4));
 }
 
 /* Versión con fondo institucional */
 .logo-box {
-  background-color: #dddddd;
-  padding: 0.5rem;
-  border-radius: 6px;
-  display: inline-block;
+
+  background-color: transparent; /* o transparente si prefieres */
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+
 }
 
 
@@ -82,7 +83,7 @@ header.institucional {
 /* Logo responsivo para móviles */
 @media (max-width: 600px) {
   .logo {
-    width: 120px;
+    width: 100px;
   }
 }
 
@@ -95,6 +96,8 @@ header.institucional {
 
 .logo.pulsante {
   animation: pulse 2s infinite;
+  filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+  
 }
 
 /* Logo en el pie de página */
@@ -140,7 +143,8 @@ p.intro {
   margin-bottom: 2rem;
 }
 .ul {
-  font-size: 1.07rem;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
 }
 
 /* ====== Bloques de anuncio ====== */
